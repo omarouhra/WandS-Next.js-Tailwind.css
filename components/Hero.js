@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className='max-w-[1200px] mx-auto px-6  py-28 space-y-16'>
+    <section className='xl:max-w-[1300px] md:max-w-[1000px] mx-auto px-6  py-28 space-y-16'>
       <article className=' animate-fade-in'>
         <h1 className='text-4xl  font-poppins leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
           A <span className='span text-blue-dark'>Digital Agency</span>

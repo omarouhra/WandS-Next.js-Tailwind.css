@@ -8,12 +8,12 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
-
     setIsMenuOpen(!isMenuOpen);
     console.log(isMenuOpen);
   };
   return (
-    <div>
+    <div
+      className={isMenuOpen ? "overflow-y-hidden h-screen" : "overflow-y-auto"}>
       <Head>
         <title>A Digital Agency in Stockholm</title>
         <link rel='icon' href='/favicon.ico' />
@@ -62,10 +62,19 @@ export default function Home() {
             <section>
               <p className='text-gray-dark font-poppins mb-12 text-sm'>Menu</p>
               <section className='space-y-10'>
-                <Links onClick={openMenu} href='#menu' link='About' setIsMenuOpen={setIsMenuOpen} />
-                <Links  link='Services' setIsMenuOpen={setIsMenuOpen} />
-                <Links href='#test2' link='Projects' setIsMenuOpen={setIsMenuOpen}/>
-                <Links link='Contacts'setIsMenuOpen={setIsMenuOpen} />
+                <Links
+                  onClick={openMenu}
+                  href='#menu'
+                  link='About'
+                  setIsMenuOpen={setIsMenuOpen}
+                />
+                <Links link='Services' setIsMenuOpen={setIsMenuOpen} />
+                <Links
+                  href='#test2'
+                  link='Projects'
+                  setIsMenuOpen={setIsMenuOpen}
+                />
+                <Links link='Contacts' setIsMenuOpen={setIsMenuOpen} />
               </section>
             </section>
           </section>
