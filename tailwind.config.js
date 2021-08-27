@@ -9,7 +9,7 @@ module.exports = {
         logoFont: "Open Sans Condensed",
       },
       fontWeight: {
-        light:'100'
+        light: "100",
       },
       colors: {
         blue: {
@@ -20,6 +20,22 @@ module.exports = {
           dark: "#8F8F8F",
           light: "#FBFBFB",
         },
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.8s ease-out",
+        "fade-in-delay": "fade-in 2s ease-out ",
       },
     },
   },

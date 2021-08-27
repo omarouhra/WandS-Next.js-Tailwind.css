@@ -1,9 +1,15 @@
 import Head from "next/head";
-import { BeakerIcon, MenuAlt4Icon } from "@heroicons/react/outline";
+import { BeakerIcon, MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
 import Links from "../components/animation/Links";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div>
       <Head>
@@ -17,18 +23,28 @@ export default function Home() {
         />
       </Head>
       {/* Navigation */}
-      <section className='px-6 py-12 flex items-center justify-between'>
+      <section className='px-6 py-12 flex items-center justify-between max-w-[90vw] mx-auto'>
         <a href='#' className='font-logoFont text-md'>
           Will <br /> & Skill
         </a>
-        <MenuAlt4Icon className='w-10 z-50 cursor-pointer hover:text-white hover:bg-black rounded-full p-1 transition duration-250' />
+        <div className='z-50 h-12 overflow-hidden cursor-pointer hover:text-white hover:bg-black rounded-full p-1 transition duration-50'>
+          <MenuAlt4Icon
+            className={isMenuOpen ? "menuButton" : "menuButton-active"}
+            onClick={openMenu}
+          />
+          <XIcon
+            className={isMenuOpen ? "menuButton" : "menuButton-active"}
+            onClick={openMenu}
+          />
+        </div>
       </section>
 
       {/* Menu */}
-      <section className='hidden absolute backdrop-blur-sm	 top-0  h-screen w-full  '>
-        <section className='h-screen w-full bg-white flex flex-col justify-around  px-6 py-12  max-w-3xl ml-auto shadow-2xl  '>
+      <section id='menu' className={isMenuOpen ? "bg bg-active" : "bg bg"}>
+        <section
+          className={isMenuOpen ? " menu menu-active" : " menu menu-hidden"}>
           {/* socials */}
-          <section className='flex md:space-x-24'>
+          <section className='flex md:space-x-24 '>
             <section className='hidden md:flex md:flex-col'>
               <p className='text-gray-dark font-poppins mb-12 text-sm'>
                 Socials
@@ -52,13 +68,16 @@ export default function Home() {
             </section>
           </section>
 
-          <p className='font-poppins underline font-semibold'>Contact@w&s.se</p>
+          <a className='font-poppins underline font-semibold cursor-pointer'>
+            Contact@w&s.se
+          </a>
         </section>
       </section>
 
-      <section>
-        <article>
-          <h1 className='text-4xl  font-poppins leading-relaxed mb-8 '>
+      {/* hero Section */}
+      <section className='max-w-[1200px] mx-auto px-6  py-36'>
+        <article className='mb-12 animate-fade-in'>
+          <h1 className='text-4xl  font-poppins leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
             A <span className='span text-blue-dark'>Digital Agency</span>
             <br /> in Stockholm 👋!
           </h1>
@@ -75,14 +94,37 @@ export default function Home() {
           </a>
         </article>
 
-        <article className='w-full flex flex-col items-end'>
-          <p className='text-sm text-right w-3/5 leading-relaxed'>
+        <article className='w-full flex flex-col items-end animate-fade-in-delay'>
+          <p className='text-sm text-right leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
             We are a Tech Partner with a genuine passion for developing{" "}
             <span className='span'>great products</span> and services together
             with our clients.
           </p>
-          <section>
-            {/* <Image src='https://www.svgrepo.com/show/303195/instagram-glyph-1-logo.svg' /> */}
+          <section className='flex gap-5 items-center '>
+            <a target='_blank' href='https://www.instagram.com/willandskill/'>
+              <Image
+                width='18px'
+                height='18px'
+                src='https://www.svgrepo.com/show/303195/instagram-glyph-1-logo.svg'
+                alt='instagram icon'
+              />
+            </a>
+            <a target='_blank' href='https://www.facebook.com/WillAndSkill'>
+              <Image
+                width='22px'
+                height='22px'
+                src='https://www.svgrepo.com/show/332056/facebook.svg'
+                alt='facebook icon'
+              />
+            </a>
+            <a target='_blank' href='https://www.linkedin.com/company/3506216'>
+              <Image
+                width='18px'
+                height='18px'
+                src='https://www.svgrepo.com/show/128403/linkedin.svg'
+                alt='twiter icon'
+              />
+            </a>
           </section>
         </article>
       </section>
