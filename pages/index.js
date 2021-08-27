@@ -23,7 +23,7 @@ export default function Home() {
         />
       </Head>
       {/* Navigation */}
-      <section className='px-6 py-12 flex items-center justify-between max-w-[90vw] mx-auto'>
+      <section className='px-6 py-12 flex items-center justify-between xl:max-w-[90vw] mx-auto'>
         <a href='#' className='font-logoFont text-md'>
           Will <br /> & Skill
         </a>
