@@ -1,14 +1,16 @@
 import Head from "next/head";
-import { BeakerIcon, MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
+import { MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
 import Links from "../components/animation/Links";
-import Image from "next/image";
 import { useState } from "react";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
+
     setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
   };
   return (
     <div>
@@ -23,7 +25,7 @@ export default function Home() {
         />
       </Head>
       {/* Navigation */}
-      <section className='px-6 py-12 flex items-center justify-between xl:max-w-[90vw] mx-auto'>
+      <section className='px-6 py-12 flex items-center justify-between  xl:max-w-[90vw] mx-auto'>
         <a href='#' className='font-logoFont text-md'>
           Will <br /> & Skill
         </a>
@@ -59,11 +61,11 @@ export default function Home() {
             {/* Menu */}
             <section>
               <p className='text-gray-dark font-poppins mb-12 text-sm'>Menu</p>
-              <section className='space-y-8'>
-                <Links link='About' />
-                <Links link='Services' />
-                <Links link='Projects' />
-                <Links link='Contacts' />
+              <section className='space-y-10'>
+                <Links onClick={openMenu} href='#menu' link='About' setIsMenuOpen={setIsMenuOpen} />
+                <Links  link='Services' setIsMenuOpen={setIsMenuOpen} />
+                <Links href='#test2' link='Projects' setIsMenuOpen={setIsMenuOpen}/>
+                <Links link='Contacts'setIsMenuOpen={setIsMenuOpen} />
               </section>
             </section>
           </section>
@@ -75,59 +77,11 @@ export default function Home() {
       </section>
 
       {/* hero Section */}
-      <section className='max-w-[1200px] mx-auto px-6  py-36'>
-        <article className='mb-12 animate-fade-in'>
-          <h1 className='text-4xl  font-poppins leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
-            A <span className='span text-blue-dark'>Digital Agency</span>
-            <br /> in Stockholm 👋!
-          </h1>
-          <a className='text-sm span' href='#'>
-            Direction
-          </a>{" "}
-          |{" "}
-          <a className='text-sm span' href='#'>
-            Email
-          </a>{" "}
-          |{" "}
-          <a className='text-sm span' href='#'>
-            Call
-          </a>
-        </article>
+      <Hero />
 
-        <article className='w-full flex flex-col items-end animate-fade-in-delay'>
-          <p className='text-sm text-right leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
-            We are a Tech Partner with a genuine passion for developing{" "}
-            <span className='span'>great products</span> and services together
-            with our clients.
-          </p>
-          <section className='flex gap-5 items-center '>
-            <a target='_blank' href='https://www.instagram.com/willandskill/'>
-              <Image
-                width='18px'
-                height='18px'
-                src='https://www.svgrepo.com/show/303195/instagram-glyph-1-logo.svg'
-                alt='instagram icon'
-              />
-            </a>
-            <a target='_blank' href='https://www.facebook.com/WillAndSkill'>
-              <Image
-                width='22px'
-                height='22px'
-                src='https://www.svgrepo.com/show/332056/facebook.svg'
-                alt='facebook icon'
-              />
-            </a>
-            <a target='_blank' href='https://www.linkedin.com/company/3506216'>
-              <Image
-                width='18px'
-                height='18px'
-                src='https://www.svgrepo.com/show/128403/linkedin.svg'
-                alt='twiter icon'
-              />
-            </a>
-          </section>
-        </article>
-      </section>
+      {/* test */}
+      <section id='test' className='h-[90vh] w-full '></section>
+      <section id='test2' className='h-[90vh] w-full'></section>
     </div>
   );
 }
