@@ -13,7 +13,11 @@ export default function Home() {
   };
   return (
     <div
-      className={isMenuOpen ? "overflow-y-hidden h-screen" : "overflow-y-auto"}>
+      className={
+        isMenuOpen
+          ? "overflow-y-hidden h-screen"
+          : "overflow-y-auto"
+      }>
       <Head>
         <title>A Digital Agency in Stockholm</title>
         <link rel='icon' href='/favicon.ico' />
