@@ -8,45 +8,42 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
+    const body = document.querySelector;
     setIsMenuOpen(!isMenuOpen);
     console.log(isMenuOpen);
   };
   return (
-    <div
-      className={
-        isMenuOpen
-          ? "overflow-y-hidden h-screen"
-          : "overflow-y-auto"
-      }>
-      <Head>
-        <title>A Digital Agency in Stockholm</title>
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Poppins:ital,wght@0,400;0,600;0,700;1,100&display=swap'
-          rel='stylesheet'
-        />
-      </Head>
-      {/* Navigation */}
-      <section className='px-6 py-12 flex items-center justify-between max-w-[90vw] mx-auto'>
-        <a href='#' className='font-logoFont text-md'>
-          Will <br /> & Skill
-        </a>
-        <div className='z-50 h-12 overflow-hidden cursor-pointer hover:text-white hover:bg-black rounded-full p-1 transition duration-50'>
-          <MenuAlt4Icon
-            className={isMenuOpen ? "menuButton" : "menuButton-active"}
-            onClick={openMenu}
+    <>
+      <div className={isMenuOpen ? "overflow-hidden h-screen" : "relative"}>
+        <Head>
+          <title>A Digital Agency in Stockholm</title>
+          <link rel='icon' href='/favicon.ico' />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Poppins:ital,wght@0,400;0,600;0,700;1,100&display=swap'
+            rel='stylesheet'
           />
-          <XIcon
-            className={isMenuOpen ? "menuButton" : "menuButton-active"}
-            onClick={openMenu}
-          />
-        </div>
-      </section>
+        </Head>
+        {/* Navigation */}
+        <section className='px-6 py-12 flex items-center justify-between lg:max-w-[90vw] mx-auto'>
+          <a href='#' className='font-logoFont text-md'>
+            Will <br /> & Skill
+          </a>
+          <div className='z-50 h-12 overflow-hidden cursor-pointer hover:text-white hover:bg-black rounded-full p-1 transition duration-50'>
+            <MenuAlt4Icon
+              className={isMenuOpen ? "menuButton" : "menuButton-active"}
+              onClick={openMenu}
+            />
+            <XIcon
+              className={isMenuOpen ? "menuButton" : "menuButton-active"}
+              onClick={openMenu}
+            />
+          </div>
+        </section>
 
-      {/* Menu */}
-      <section id='menu' className={isMenuOpen ? "bg bg-active" : "bg bg"}>
+        {/* Menu */}
+
         <section
           className={isMenuOpen ? " menu menu-active" : " menu menu-hidden"}>
           {/* socials */}
@@ -87,14 +84,14 @@ export default function Home() {
             Contact@w&s.se
           </a>
         </section>
-      </section>
 
-      {/* hero Section */}
-      <Hero />
+        {/* hero Section */}
+        <Hero />
 
-      {/* test */}
-      <section id='test' className='h-[90vh] w-full '></section>
-      <section id='test2' className='h-[90vh] w-full'></section>
-    </div>
+        {/* test */}
+        <section id='test' className='h-[90vh] w-full '></section>
+        <section id='test2' className='h-[90vh] w-full'></section>
+      </div>
+    </>
   );
 }

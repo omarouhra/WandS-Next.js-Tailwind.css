@@ -2,21 +2,21 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className='xl:max-w-[1300px] md:max-w-[1000px] mx-auto px-6  py-28 space-y-16'>
+    <section className='  lg:max-w-[90vw] xl:max-w-[1200px] mx-auto px-6 py-20  md:py-28 space-y-10 md:space-y-16'>
       <article className=' animate-fade-in'>
         <h1 className='text-4xl  font-poppins leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
           A <span className='span text-blue-dark'>Digital Agency</span>
           <br /> in Stockholm 👋!
         </h1>
-        <a className='text-sm span' href='#'>
+        <a className='text-sm span hover:underline' href='#'>
           Direction
         </a>{" "}
         |{" "}
-        <a className='text-sm span' href='#'>
+        <a className='text-sm span hover:underline' href='#'>
           Email
         </a>{" "}
         |{" "}
-        <a className='text-sm span' href='#'>
+        <a className='text-sm span hover:underline' href='#'>
           Call
         </a>
       </article>
@@ -27,7 +27,7 @@ function Hero() {
           <span className='span'>great products</span> and services together
           with our clients.
         </p>
-        <section className='flex space-x-5 items-center '>
+        <section className='flex space-x-5 items-center'>
           <a target='_blank' href='https://www.instagram.com/willandskill/'>
             <Image
               width='18px'

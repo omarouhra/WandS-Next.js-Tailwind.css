@@ -9,28 +9,18 @@
 
 /* Menu  */
 .menu {
-  @apply   h-screen bg-white flex flex-col  justify-around  px-6 py-12  max-w-3xl ml-auto shadow-2xl transition-all duration-1000;
+  @apply z-10 absolute top-0 right-0 bg-white flex flex-col h-screen w-full justify-around  px-6 py-12  max-w-3xl  shadow-2xl transition-all duration-[.9s] ;
 }
 .menu-hidden {
-  @apply  opacity-0  translate-x-[60vw];
+  @apply  opacity-0  translate-x-[60vw] ;
 }
 .menu-active {
   @apply  opacity-100 ;
 }
 
-/* backgound */
-.bg {
-  @apply z-10  absolute top-0 h-screen w-full overflow-y-hidden  transition-all duration-200;
-}
-.bg-active {
-  @apply backdrop-blur-sm opacity-100 overscroll-y-none ;
-}
-.bg-hidden {
-  @apply opacity-0;
-}
 
-/* Menu Button */
 
+/* Navigation Button */
 .menuButton {
   @apply w-10 -translate-y-10 transition-all duration-500;
 }

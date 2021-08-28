@@ -1,10 +1,14 @@
+import { useEffect } from "react";
+
 function Links({ link, href, setIsMenuOpen }) {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.style.scrollBehavior = "smooth";
+  }, []);
   return (
     <div className='text-3xl  w-36  h-9 overflow-y-hidden group'>
       <button
         onClick={() => {
-          const html = document.querySelector("html");
-          html.style.scrollBehavior = "smooth";
           setIsMenuOpen(false);
         }}>
         <a
