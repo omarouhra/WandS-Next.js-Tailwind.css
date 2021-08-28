@@ -32,9 +32,31 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        "fade-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(100px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "fade-right": {
+          "0%": {
+            opacity: "1",
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateX(20px)",
+          },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.8s ease-out",
+        "fade-left": "fade-left 1s ease-out",
+        "fade-right": "fade-right 0.8s ease-out",
         "fade-in-delay": "fade-in 2s ease-out ",
       },
     },
