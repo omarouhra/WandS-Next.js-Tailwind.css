@@ -1,6 +1,6 @@
 function Title({ title ,alignementRight }) {
   return (
-    <div className={alignementRight ? 'flex flex-col items-end' :'flex flex-col'}>
+    <div className={alignementRight ? 'flex flex-col text-left items-end' :'flex flex-col'}>
       <h2 className='font-poppins font-semibold md:text-xl'>
         {title}
       </h2>

@@ -16,6 +16,8 @@ import Picture from "../components/layout/Picture";
 import Title from "../components/styles/Title";
 import Service from "../components/layout/Service";
 import ServiceData from "../data/serviceData";
+import image1 from "../images/picture.png";
+import Image from "next/image";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -127,7 +129,13 @@ export default function Home() {
           />
         </section>
         {/* Pics section */}
-        <Picture />
+        <Picture
+          image={
+            <div className='relative w-[90vw] h-[20vh] md:h-[30vh] lg:h-[40vh] lg:max-w-4xl'>
+              <Image src={image1} layout='fill' objectFit='cover' />{" "}
+            </div>
+          }
+        />
 
         {/* About us */}
         <section className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
@@ -161,7 +169,7 @@ export default function Home() {
             title='What do we bring to the table ?'
             alignementRight={false}
           />
-          <section className=" grid gap-7 mt-12 md:grid-cols-2 md:gap-16 ">
+          <section className=' grid gap-7 mt-12 md:grid-cols-2 md:gap-16 '>
             {ServiceData?.map(({ id, icon, title, paragraph }) => (
               <Service
                 key={id}
@@ -171,6 +179,30 @@ export default function Home() {
               />
             ))}
           </section>
+        </section>
+
+        {/* Pics section */}
+        <Picture
+          alignementRight={true}
+          image={
+            <div className='relative w-[80vw] h-[25vh] md:h-[40vh]  lg:h-[50vh] lg:max-w-4xl'>
+              <Image
+                src='https://images.unsplash.com/photo-1560264418-c4445382edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
+                layout='fill'
+                objectFit='cover'
+              />
+            </div>
+          }
+        />
+
+        {/* Paragraph  */}
+        <section className="padding">
+          <Paragraph
+            firstPart='We are a team of naturally curious '
+            span='designers & developers'
+            secondPart='with different skills and experiences'
+            blueSpane={true}
+          />
         </section>
       </div>
     </>
