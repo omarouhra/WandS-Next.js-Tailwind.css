@@ -1,7 +1,7 @@
 function Paragraph({ firstPart, secondPart, span }) {
   return (
     <div>
-      <p className='padding text-lg md:text-xl lg:text-3xl text-center px-6  md:max-w-3xl mx-auto leading-relaxed font-poppins'>
+      <p className=' paragraph leading-relaxed font-poppin  text-center '>
         {firstPart}
         <span className='span'>{span}</span> {secondPart}
       </p>

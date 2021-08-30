@@ -6,6 +6,7 @@ import Hero from "../components/layout/Hero";
 import Slider from "../components/animation/Slider";
 import Paragraph from "../components/styles/Paragraph";
 import Picture from "../components/layout/Picture";
+import Title from "../components/styles/Title";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -108,14 +109,38 @@ export default function Home() {
         </section>
 
         {/* Paragraph */}
-        <Paragraph
-          firstPart='We guide and assist our clients in designing and developing '
-          secondPart='digital experiences'
-          span='seamless'
-        />
-
+        <section className='padding'>
+          <Paragraph
+            firstPart='We guide and assist our clients in designing and developing '
+            span='seamless'
+            secondPart='digital experiences'
+            center={true}
+          />
+        </section>
         {/* Pics section */}
         <Picture />
+
+        {/* About us */}
+        <section className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
+          <article>
+            <p className='font-poppins text-lg max-w-xl'>
+              We help you succeed with your digital efforts by developing
+              <span className='span'> solutions</span> tailored for your
+              business
+            </p>
+            <button className='border px-3 py-1 rounded-sm border-black  mt-6 '>
+              Contact us
+            </button>
+          </article>
+          <article className=' flex flex-col justify-center items-end'>
+            <Title title={"About us"} alignementRight={true} />
+            <p className='font-poppins text-gray text-right  my-6 max-w-xl leading-loose'>
+              Our teams thrive on challenges and we enjoy crafting world class
+              solutions that enable start-ups and established companies to
+              streamline internal processes and build great products.
+            </p>
+          </article>
+        </section>
       </div>
     </>
   );
