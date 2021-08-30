@@ -23,7 +23,7 @@ const ServiceData = [
   },
   {
     id: 3,
-    icon: <NewspaperIcon className='w-8 text-blue-dark' />,
+    icon: <NewspaperIcon className='h-8 w-8 text-blue-dark' />,
     title: "Consultants!",
     paragraph:
       "Complement your tech team with responsive and passionate developers.",
