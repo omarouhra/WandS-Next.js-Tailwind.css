@@ -1,5 +1,12 @@
 import Head from "next/head";
-import { MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
+import {
+  AdjustmentsIcon,
+  BeakerIcon,
+  DesktopComputerIcon,
+  MenuAlt4Icon,
+  NewspaperIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 import Links from "../components/animation/Links";
 import { useState, useEffect } from "react";
 import Hero from "../components/layout/Hero";
@@ -7,6 +14,8 @@ import Slider from "../components/animation/Slider";
 import Paragraph from "../components/styles/Paragraph";
 import Picture from "../components/layout/Picture";
 import Title from "../components/styles/Title";
+import Service from "../components/layout/Service";
+import ServiceData from "../data/serviceData";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,6 +149,28 @@ export default function Home() {
               streamline internal processes and build great products.
             </p>
           </article>
+        </section>
+
+        {/* Services */}
+
+        <section className='padding md:max-w-6xl mx-auto px-6'>
+          <small className='text-xs md:text-sm text-gray-300'>
+            Take a look on{" "}
+          </small>
+          <Title
+            title='What do we bring to the table ?'
+            alignementRight={false}
+          />
+          <section className=" grid gap-7 mt-12 md:grid-cols-2 md:gap-16 ">
+            {ServiceData?.map(({ id, icon, title, paragraph }) => (
+              <Service
+                key={id}
+                icon={icon}
+                title={title}
+                paragraph={paragraph}
+              />
+            ))}
+          </section>
         </section>
       </div>
     </>

@@ -10,10 +10,6 @@
 .padding {
   @apply py-24 md:py-28 lg:py-32 ;
 }
-/* pagaraph */
-.paragraph {
-  @apply text-lg md:text-xl lg:text-3xl  px-6  md:max-w-3xl mx-auto ;
-}
 
 /* Menu  */
 .menu {
