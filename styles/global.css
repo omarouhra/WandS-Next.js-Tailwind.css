@@ -4,7 +4,11 @@
 
 /* Bold Text */
 .span {
-  @apply font-semibold;
+  @apply font-bold;
+}
+/* padding */
+.padding {
+  @apply py-24 md:py-28 lg:py-32
 }
 
 /* Menu  */
@@ -12,19 +16,12 @@
   @apply z-10 absolute top-0  bg-white right-0 flex flex-col h-screen w-full justify-around  px-6 py-12  max-w-3xl  shadow-2xl transform transition-all duration-[1s];
 }
 .menu-hidden {
-  @apply z-0 opacity-0;
+  @apply hidden z-0 opacity-0;
 }
 .menu-active {
-  @apply inline-flex   opacity-100;
-}
-/* background  */
-.background-hidden {
-  @apply h-screen w-full z-0 absolute top-0 right-0  bg-transparent;
+  @apply visible opacity-100;
 }
 
-.background-active {
-  @apply  h-screen w-full absolute top-0 right-0 filter backdrop-blur-sm z-10;
-}
 
 /* Navigation Button */
 .menuButton {
