@@ -18,6 +18,8 @@ import Service from "../components/layout/Service";
 import ServiceData from "../data/serviceData";
 import image1 from "../images/picture.png";
 import Image from "next/image";
+import projectData from "../data/projectData";
+import Project from "../components/layout/Project";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -160,7 +162,6 @@ export default function Home() {
         </section>
 
         {/* Services */}
-
         <section className='padding md:max-w-6xl mx-auto px-6'>
           <small className='text-xs md:text-sm text-gray-300'>
             Take a look on{" "}
@@ -196,12 +197,27 @@ export default function Home() {
         />
 
         {/* Paragraph  */}
-        <section className="padding">
+        <section className='padding'>
           <Paragraph
             firstPart='We are a team of naturally curious '
             span='designers & developers'
             secondPart='with different skills and experiences'
             blueSpane={true}
+          />
+        </section>
+
+        {/* Slider */}
+        <Slider />
+
+        {/* Projects */}
+
+        <section className='padding md:max-w-6xl mx-auto px-6'>
+          <Project
+            projectImage={projectData[0].image}
+            smallTitle={projectData[0].description}
+            title={projectData[0].title}
+            paragraph={projectData[0].paragraph}
+            link={projectData[0].link}
           />
         </section>
       </div>
