@@ -32,6 +32,16 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        "fade-out": {
+          "0%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+        },
         "fade-left": {
           "0%": {
             opacity: "0",
@@ -55,6 +65,7 @@ module.exports = {
       },
       animation: {
         "fade-in": "fade-in 0.8s ease-out",
+        "fade-out": "fade-out 0.8s ease-out",
         "fade-left": "fade-left 1s ease-out",
         "fade-right": "fade-right 0.8s ease-out",
         "fade-in-delay": "fade-in 2s ease-out ",

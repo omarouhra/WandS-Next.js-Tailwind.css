@@ -23,6 +23,7 @@ import Project from "../components/layout/Project";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [projectId, setProjectId] = useState(0);
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -130,6 +131,7 @@ export default function Home() {
             center={true}
           />
         </section>
+
         {/* Pics section */}
         <Picture
           image={
@@ -163,7 +165,7 @@ export default function Home() {
 
         {/* Services */}
         <section className='padding md:max-w-6xl mx-auto px-6'>
-          <small className='text-xs md:text-sm text-gray-300'>
+          <small className='text-xs md:text-sm font-poppins text-gray-300'>
             Take a look on{" "}
           </small>
           <Title
@@ -210,14 +212,15 @@ export default function Home() {
         <Slider />
 
         {/* Projects */}
-
         <section className='padding md:max-w-6xl mx-auto px-6'>
           <Project
-            projectImage={projectData[0].image}
-            smallTitle={projectData[0].description}
-            title={projectData[0].title}
-            paragraph={projectData[0].paragraph}
-            link={projectData[0].link}
+            projectImage={projectData[projectId].image}
+            smallTitle={projectData[projectId].description}
+            title={projectData[projectId].title}
+            paragraph={projectData[projectId].paragraph}
+            link={projectData[projectId].link}
+            setProjectId={setProjectId}
+            id={projectId}
           />
         </section>
       </div>

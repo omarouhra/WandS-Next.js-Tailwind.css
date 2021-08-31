@@ -8,7 +8,7 @@
 }
 /* padding */
 .padding {
-  @apply py-24 md:py-28 lg:py-32 ;
+  @apply py-24 md:py-28 lg:py-32;
 }
 
 /* Menu  */
@@ -33,4 +33,12 @@
 /* Max Width */
 .max-width {
   @apply max-w-[70%] mx-auto;
+}
+
+/* slider indicators  */
+.dot {
+  @apply h-2  w-2  bg-blue-light;
+}
+.dot-active {
+  @apply h-3 w-3 bg-blue-dark;
 }

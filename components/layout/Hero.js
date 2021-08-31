@@ -8,7 +8,7 @@ function Hero() {
           A <span className='span text-blue-dark'>Digital Agency</span>
           <br /> in Stockholm 👋!
         </h1>
-        <a className='text-sm span hover:underline' href='#'>
+        <a className='text-sm  span hover:underline' href='#'>
           Direction
         </a>{" "}
         |{" "}
@@ -22,7 +22,7 @@ function Hero() {
       </article>
 
       <article className='w-full flex flex-col items-end animate-fade-in-delay'>
-        <p className='text-sm text-right leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
+        <p className='text-sm text-right font-poppins leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
           We are a Tech Partner with a genuine passion for developing{" "}
           <span className='span'>great products</span> and services together
           with our clients.
