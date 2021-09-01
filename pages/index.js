@@ -30,7 +30,11 @@ export default function Home() {
   const [projectId, setProjectId] = useState(0);
 
   const openMenu = () => {
+    const menu = document.querySelector("#menu");
+
     setIsMenuOpen(!isMenuOpen);
+
+    menu.classList.add("animate-fade-in");
   };
   return (
     <>
@@ -72,6 +76,7 @@ export default function Home() {
 
         {/* Menu */}
         <section
+          id='menu'
           className={isMenuOpen ? " menu menu-active" : " menu menu-hidden"}>
           {/* socials */}
           <section className='flex md:space-x-24 '>
@@ -122,7 +127,7 @@ export default function Home() {
         <Hero />
 
         {/* Companies */}
-        <section>
+        <section >
           <section>
             <hr className='text-gray-400 ' />
             <p className='text-xs -mt-4 font-semibold text-blue-dark text-center bg-gray-100 py-2 w-36 lg:w-44 rounded-full mx-auto'>
@@ -130,7 +135,6 @@ export default function Home() {
             </p>
           </section>
 
-          <Slider />
         </section>
 
         {/* Paragraph */}
