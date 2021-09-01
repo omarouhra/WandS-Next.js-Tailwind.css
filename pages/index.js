@@ -19,7 +19,10 @@ import ServiceData from "../data/serviceData";
 import image1 from "../images/picture.png";
 import Image from "next/image";
 import projectData from "../data/projectData";
+import blogData from "../data/blogData";
 import Project from "../components/layout/Project";
+import Button from "../components/styles/Button";
+import Blog from "../components/layout/Blog";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +37,7 @@ export default function Home() {
         body {
           overflow-x: hidden;
           max-width: 100%;
+          font-family: "poppins", sans serif;
         }
       `}</style>
       <div>
@@ -71,10 +75,8 @@ export default function Home() {
           {/* socials */}
           <section className='flex md:space-x-24 '>
             <section className='hidden md:flex md:flex-col'>
-              <p className='text-gray-dark font-poppins mb-12 text-sm'>
-                Socials
-              </p>
-              <section className='space-y-4 flex flex-col text-sm font-poppins'>
+              <p className='text-gray-dark  mb-12 text-sm'>Socials</p>
+              <section className='space-y-4 flex flex-col text-sm '>
                 <a href=''>Facebook</a>
                 <a href=''>Instagram</a>
                 <a href=''>Twitter</a>
@@ -83,7 +85,7 @@ export default function Home() {
 
             {/* Menu */}
             <section>
-              <p className='text-gray-dark font-poppins mb-12 text-sm'>Menu</p>
+              <p className='text-gray-dark  mb-12 text-sm'>Menu</p>
               <section className='space-y-10'>
                 <Links
                   onClick={openMenu}
@@ -102,7 +104,7 @@ export default function Home() {
             </section>
           </section>
 
-          <a className='font-poppins underline font-semibold cursor-pointer'>
+          <a className=' underline font-semibold cursor-pointer'>
             Contact@w&s.se
           </a>
         </section>
@@ -144,7 +146,7 @@ export default function Home() {
         {/* About us */}
         <section className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
           <article>
-            <p className='font-poppins text-lg max-w-xl'>
+            <p className='text-lg max-w-xl'>
               We help you succeed with your digital efforts by developing
               <span className='span'> solutions</span> tailored for your
               business
@@ -155,7 +157,7 @@ export default function Home() {
           </article>
           <article className=' flex flex-col justify-center items-end'>
             <Title title={"About us"} alignementRight={true} />
-            <p className='font-poppins text-gray text-right  my-6 max-w-xl leading-loose'>
+            <p className=' text-gray text-right  my-6 max-w-xl leading-loose'>
               Our teams thrive on challenges and we enjoy crafting world class
               solutions that enable start-ups and established companies to
               streamline internal processes and build great products.
@@ -165,7 +167,7 @@ export default function Home() {
 
         {/* Services */}
         <section className='padding md:max-w-6xl mx-auto px-6'>
-          <small className='text-xs md:text-sm font-poppins text-gray-300'>
+          <small className='text-xs md:text-sm  text-gray-300'>
             Take a look on{" "}
           </small>
           <Title
@@ -222,6 +224,26 @@ export default function Home() {
             setProjectId={setProjectId}
             id={projectId}
           />
+        </section>
+
+        {/* Blog section */}
+        <section className='padding md:max-w-6xl mx-auto px-6 '>
+          <section className='py-12 px-6 bg-gray-light flex flex-col space-y-16 lg:flex-row lg:space-y-0 lg:space-x-12'>
+            <section>
+              <Title title='Our latest news and articles' />
+              <p className='text-sm text-gray-400 leading-relaxed my-5'>
+                For more information regarding our technologies and our work,
+                please visit our tech blog.
+              </p>
+              <Button link='All Articles' />
+            </section>
+
+            <section className='flex flex-col space-y-16 lg:flex-row lg:space-y-0 lg:space-x-12'>
+              {blogData.map(({ id, image, date, title }) => (
+                <Blog key={id} src={image} date={date} title={title} />
+              ))}
+            </section>
+          </section>
         </section>
       </div>
     </>

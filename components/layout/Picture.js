@@ -7,8 +7,8 @@ function Picture({ alignementRight, image }) {
         <div
           className={
             alignementRight
-              ? "absolute right-0 w-1/2  h-full bg-blue-light shadow-2xl "
-              : "absolute left-0 w-1/2  h-full bg-blue-light shadow-2xl "
+              ? "absolute right-0 w-1/2  h-full bg-blue-light shadow-2xl md:hidden "
+              : "absolute left-0 w-1/2  h-full bg-blue-light shadow-2xl md:hidden  "
           }></div>
 
         {image}

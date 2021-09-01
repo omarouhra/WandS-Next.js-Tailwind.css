@@ -58,14 +58,14 @@ function Project({
           <small className='text-xs text-gray-300 font-poppins'>
             {smallTitle}
           </small>
-          <h2 className='text-xl font-poppins font-semibold mt-4 mb-8 lg:text-2xl'>
+          <h2 className='text-xl font-semibold mt-4 mb-8 lg:text-2xl'>
             {title}
           </h2>
-          <p className='text-sm font-poppins leading-loose mb-8 text-gray-500'>
+          <p className='text-sm leading-loose mb-8 text-gray-500'>
             {paragraph}
           </p>
           <a
-            className='text-blue-dark font-poppins font-bold text-sm'
+            className='text-blue-dark font-bold text-sm'
             target='_blank'
             href='#'>
             {link}

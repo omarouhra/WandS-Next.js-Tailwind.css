@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section className='  lg:max-w-[80vw] xl:max-w-[70vw] mx-auto px-6 py-20  md:py-28 space-y-10 md:space-y-16'>
       <article className=' animate-fade-in'>
-        <h1 className='text-4xl  font-poppins leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
+        <h1 className='text-4xl leading-relaxed mb-8 md:text-6xl md:leading-relaxed  '>
           A <span className='span text-blue-dark'>Digital Agency</span>
           <br /> in Stockholm 👋!
         </h1>
@@ -22,7 +22,7 @@ function Hero() {
       </article>
 
       <article className='w-full flex flex-col items-end animate-fade-in-delay'>
-        <p className='text-sm text-right font-poppins leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
+        <p className='text-sm text-right  leading-loose w-xs sm:max-w-md mb-4 md:text-base md:leading-loose'>
           We are a Tech Partner with a genuine passion for developing{" "}
           <span className='span'>great products</span> and services together
           with our clients.
