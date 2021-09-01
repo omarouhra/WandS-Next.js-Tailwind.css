@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Socials from "../styles/Socials";
 
 function Hero() {
   return (
@@ -27,32 +27,7 @@ function Hero() {
           <span className='span'>great products</span> and services together
           with our clients.
         </p>
-        <section className='flex space-x-5 items-center'>
-          <a target='_blank' href='https://www.instagram.com/willandskill/'>
-            <Image
-              width='18px'
-              height='18px'
-              src='https://www.svgrepo.com/show/303195/instagram-glyph-1-logo.svg'
-              alt='instagram icon'
-            />
-          </a>
-          <a target='_blank' href='https://www.facebook.com/WillAndSkill'>
-            <Image
-              width='22px'
-              height='22px'
-              src='https://www.svgrepo.com/show/332056/facebook.svg'
-              alt='facebook icon'
-            />
-          </a>
-          <a target='_blank' href='https://www.linkedin.com/company/3506216'>
-            <Image
-              width='18px'
-              height='18px'
-              src='https://www.svgrepo.com/show/128403/linkedin.svg'
-              alt='twiter icon'
-            />
-          </a>
-        </section>
+        <Socials />
       </article>
     </section>
   );

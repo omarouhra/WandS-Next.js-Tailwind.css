@@ -23,6 +23,7 @@ import blogData from "../data/blogData";
 import Project from "../components/layout/Project";
 import Button from "../components/styles/Button";
 import Blog from "../components/layout/Blog";
+import Socials from "../components/styles/Socials";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -267,7 +268,7 @@ export default function Home() {
         </section>
 
         {/* Carrer section */}
-        <section className='md:max-w-6xl mx-auto px-6  flex flex-col space-y-12 md:flex-row md:space-y-0 md:justify-between'>
+        <section className='pb-12 md:max-w-6xl mx-auto px-6  flex flex-col space-y-12 md:flex-row md:space-y-0 md:justify-between'>
           <p>
             Looking for a <span className='span'>job?</span>
           </p>
@@ -280,9 +281,65 @@ export default function Home() {
             <Button link='Carrer Page' />
           </section>
         </section>
-        
+
         {/* footer section */}
-      
+        <footer className='pt-12 pb-4 md:max-w-6xl mx-auto px-6 '>
+          <section className='py-12 px-6 lg:px-12 bg-gray-light '>
+            <a href='#' className='font-logoFont text-md'>
+              Will <br /> & Skill
+            </a>
+            <section className=' mt-12 flex flex-col space-y-20 lg:flex-row-reverse lg:justify-between lg:space-y-0'>
+              <section className='text-sm space-y-4 lg:space-x-0'>
+                <p>556893-5273</p>
+                <p>Långholmsgatan 27, 7 tr</p>
+                <p>117 33 Stockholm</p>
+                <p>08 410 99 141</p>
+                <Socials />
+              </section>
+              <section className='grid gap-8 md:grid-cols-3'>
+                <section className='flex flex-col space-y-3'>
+                  <p className='font-semibold'>Company</p>
+                  <a className='text-sm text-gray-dark' href=''>
+                    About us
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Services
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Our Customers
+                  </a>
+                </section>
+                <section className='flex flex-col space-y-3'>
+                  <p className='font-semibold'>Contact</p>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Email
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Support
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Career
+                  </a>
+                </section>
+                <section className='flex flex-col space-y-3'>
+                  <p className='font-semibold'>Products</p>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Toochbase
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Yrkesdörren
+                  </a>
+                  <a className='text-sm text-gray-dark' href=''>
+                    Our Customers
+                  </a>
+                </section>
+              </section>
+            </section>
+          </section>
+          <section className='flex items-center justify-center py-3 bg-blue-dark text-white text-sm font-semibold'>
+            <p>© 2021 Will & Skill</p>
+          </section>
+        </footer>
       </div>
     </>
   );
