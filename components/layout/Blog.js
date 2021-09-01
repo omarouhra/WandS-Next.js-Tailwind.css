@@ -6,7 +6,7 @@ function Blog({ src, date, title }) {
         <Image src={src} layout='fill' objectFit='cover' />
       </div>
       <small className='text-xs text-gray-400 '>{date}</small>
-      <p className='text-md font-semibold mt-8 '>{title}</p>
+      <p className='text-sm font-semibold mt-8 '>{title}</p>
     </div>
   );
 }

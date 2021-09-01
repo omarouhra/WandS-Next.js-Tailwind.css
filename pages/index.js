@@ -245,6 +245,26 @@ export default function Home() {
             </section>
           </section>
         </section>
+
+        {/* Contact us */}
+        <section className='padding md:max-w-6xl mx-auto px-6 '>
+          <section className='py-12 px-6 md:px-12 bg-blue-dark text-white shadow-2xl md:flex md:space-x-12'>
+            <p className=' text-3xl leading-loose mb-10 md:w-2/3'>
+              NOW ABOUT YOUR <br />
+              <span className='span'>PROJECT...</span>
+            </p>
+            <section>
+              <p className='text-sm leading-loose mb-12 md:mb-10'>
+                Do you want to discuss an idea, develop your technical platform
+                or have thoughts on how to begin your digital journey? Do not
+                hesitate to get in touch.
+              </p>
+              <a href='mailto=contact@will&skill.se' className='underline'>
+                contact@will&skill.se <span className='animate-pulse'> > </span>{" "}
+              </a>
+            </section>
+          </section>
+        </section>
       </div>
     </>
   );
