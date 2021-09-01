@@ -265,6 +265,24 @@ export default function Home() {
             </section>
           </section>
         </section>
+
+        {/* Carrer section */}
+        <section className='md:max-w-6xl mx-auto px-6  flex flex-col space-y-12 md:flex-row md:space-y-0 md:justify-between'>
+          <p>
+            Looking for a <span className='span'>job?</span>
+          </p>
+
+          <section className='md:w-1/2'>
+            <p className='text-gray-dark text-xs md:text-md leading-loose mb-8 '>
+              We are constantly looking for more colleagues who want to help us
+              help our customers build the IT systems of the future.
+            </p>
+            <Button link='Carrer Page' />
+          </section>
+        </section>
+        
+        {/* footer section */}
+      
       </div>
     </>
   );
