@@ -90,17 +90,25 @@ export default function Home() {
               <section className='space-y-10'>
                 <Links
                   onClick={openMenu}
-                  href='#menu'
+                  href='#aboutUs'
                   link='About'
                   setIsMenuOpen={setIsMenuOpen}
                 />
-                <Links link='Services' setIsMenuOpen={setIsMenuOpen} />
                 <Links
-                  href='#test2'
+                  link='Services'
+                  setIsMenuOpen={setIsMenuOpen}
+                  href='#services'
+                />
+                <Links
+                  href='#projects'
                   link='Projects'
                   setIsMenuOpen={setIsMenuOpen}
                 />
-                <Links link='Contacts' setIsMenuOpen={setIsMenuOpen} />
+                <Links
+                  link='Contacts'
+                  setIsMenuOpen={setIsMenuOpen}
+                  href='#contacts'
+                />
               </section>
             </section>
           </section>
@@ -145,7 +153,9 @@ export default function Home() {
         />
 
         {/* About us */}
-        <section className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
+        <section
+          id='aboutUs'
+          className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
           <article>
             <p className='text-lg max-w-xl'>
               We help you succeed with your digital efforts by developing
@@ -167,7 +177,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section className='padding md:max-w-6xl mx-auto px-6'>
+        <section id='services' className='padding md:max-w-6xl mx-auto px-6'>
           <small className='text-xs md:text-sm  text-gray-300'>
             Take a look on{" "}
           </small>
@@ -215,7 +225,7 @@ export default function Home() {
         <Slider />
 
         {/* Projects */}
-        <section className='padding md:max-w-6xl mx-auto px-6'>
+        <section id='projects' className='padding md:max-w-6xl mx-auto px-6'>
           <Project
             projectImage={projectData[projectId].image}
             smallTitle={projectData[projectId].description}
@@ -248,7 +258,7 @@ export default function Home() {
         </section>
 
         {/* Contact us */}
-        <section className='padding md:max-w-6xl mx-auto px-6 '>
+        <section id='contacts' className='padding md:max-w-6xl mx-auto px-6 '>
           <section className='py-12 px-6 md:px-12 bg-blue-dark text-white shadow-2xl md:flex md:space-x-12'>
             <p className=' text-3xl leading-loose mb-10 md:w-2/3'>
               NOW ABOUT YOUR <br />
