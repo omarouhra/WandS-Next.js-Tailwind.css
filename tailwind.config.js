@@ -22,6 +22,14 @@ module.exports = {
         },
       },
       keyframes: {
+        scroll: {
+          "0%": {
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            transform: "translatex(calc(-96px*17))",
+          },
+        },
         "fade-in": {
           "0%": {
             opacity: "0",
@@ -64,6 +72,7 @@ module.exports = {
         },
       },
       animation: {
+        scroll: "scroll 50s linear infinite",
         "fade-in": "fade-in 0.8s ease-out",
         "fade-out": "fade-out 0.8s ease-out",
         "fade-left": "fade-left 1s ease-out",

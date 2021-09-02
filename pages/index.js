@@ -24,6 +24,7 @@ import Project from "../components/layout/Project";
 import Button from "../components/styles/Button";
 import Blog from "../components/layout/Blog";
 import Socials from "../components/styles/Socials";
+import Companies from "../components/layout/Companies";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -127,7 +128,7 @@ export default function Home() {
         <Hero />
 
         {/* Companies */}
-        <section >
+        <section>
           <section>
             <hr className='text-gray-400 ' />
             <p className='text-xs -mt-4 font-semibold text-blue-dark text-center bg-gray-100 py-2 w-36 lg:w-44 rounded-full mx-auto'>
@@ -135,6 +136,7 @@ export default function Home() {
             </p>
           </section>
 
+          <Companies />
         </section>
 
         {/* Paragraph */}
