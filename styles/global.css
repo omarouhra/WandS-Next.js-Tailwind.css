@@ -8,7 +8,7 @@
 }
 /* padding */
 .padding {
-  @apply py-24 md:py-28 lg:py-32;
+  @apply py-16 md:py-20 lg:py-24;
 }
 
 /* Menu  */
@@ -19,7 +19,7 @@
   @apply hidden z-0 opacity-0;
 }
 .menu-active {
-  @apply visible opacity-100 transition-all animate-fade-in;
+  @apply visible fixed opacity-100 transition-all animate-fade-in;
 }
 
 /* Navigation Button */

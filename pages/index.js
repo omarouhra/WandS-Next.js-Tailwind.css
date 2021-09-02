@@ -24,7 +24,7 @@ import Project from "../components/layout/Project";
 import Button from "../components/styles/Button";
 import Blog from "../components/layout/Blog";
 import Socials from "../components/styles/Socials";
-import Companies from "../components/layout/Companies";
+import Companies from "../components/animation/Companies";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,6 @@ export default function Home() {
 
   const openMenu = () => {
     const menu = document.querySelector("#menu");
-
     setIsMenuOpen(!isMenuOpen);
 
     menu.classList.add("animate-fade-in");
@@ -44,6 +43,7 @@ export default function Home() {
           overflow-x: hidden;
           max-width: 100%;
           font-family: "poppins", sans serif;
+          transition: all 0.5s;
         }
       `}</style>
       <div>
