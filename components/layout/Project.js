@@ -47,7 +47,7 @@ function Project({
     <div className='flex flex-col space-y-12 lg:flex-row lg:space-x-12 lg:space-y-0  '>
       <section className=' flex items-center justify-center lg:w-1/2'>
         <section
-          data-aos='fade-right'
+          data-aos='fade-up'
           data-aos-duration='500'
           id='image'
           className='w-full animate-fade-in  max-w-[400px] mx-auto bg-blue-light p-8 shadow-2xl   flex items-center justify-center'>
@@ -56,7 +56,7 @@ function Project({
       </section>
 
       <section
-        data-aos='fade-left'
+        data-aos='fade-up'
         data-aos-duration='500'
         className='w-full lg:w-1/2 flex flex-col justify-between '>
         <section id='projectContent' className='animate-fade-in-delay'>

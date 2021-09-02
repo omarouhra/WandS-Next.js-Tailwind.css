@@ -2,7 +2,7 @@ import Image from "next/image";
 function Socials() {
   return (
     <section
-      data-aos='fade-left'
+      data-aos='fade-in'
       data-aos-duration='900'
       className='flex space-x-5 items-center'>
       <a target='_blank' href='https://www.instagram.com/willandskill/'>

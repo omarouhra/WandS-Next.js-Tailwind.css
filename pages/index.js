@@ -33,7 +33,6 @@ export default function Home() {
           overflow-x: hidden;
           max-width: 100%;
           font-family: "poppins", sans serif;
-          transition: all 0.5s;
         }
       `}</style>
       <div>
@@ -140,7 +139,7 @@ export default function Home() {
             firstPart='We guide and assist our clients in designing and developing '
             span='seamless'
             secondPart='digital experiences'
-            center={ true }
+            center={true}
             blueSpane={true}
           />
         </section>
@@ -164,7 +163,7 @@ export default function Home() {
         <section
           id='aboutUs'
           className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
-          <article data-aos='fade-right' data-aos-duration='500'>
+          <article data-aos='fade-in' data-aos-duration='500'>
             <p className='text-lg max-w-xl'>
               We help you succeed with your digital efforts by developing
               <span className='span'> solutions</span> tailored for your
@@ -175,7 +174,7 @@ export default function Home() {
             </button>
           </article>
           <article
-            data-aos='fade-left'
+            data-aos='fade-in'
             data-aos-duration='500'
             className=' flex flex-col justify-center items-end'>
             <Title title={"About us"} alignementRight={true} />
@@ -296,12 +295,12 @@ export default function Home() {
 
         {/* Carrer section */}
         <section className='pb-12 md:max-w-6xl mx-auto px-6  flex flex-col space-y-12 md:flex-row md:space-y-0 md:justify-between'>
-          <p data-aos='fade-right' data-aos-duration='500'>
+          <p data-aos='fade-in' data-aos-duration='500'>
             Looking for a <span className='span'>job?</span>
           </p>
 
           <section
-            data-aos='fade-left'
+            data-aos='fade-in'
             data-aos-duration='500'
             className='md:w-1/2'>
             <p className='text-gray-dark text-xs md:text-md leading-loose mb-8 '>
@@ -366,7 +365,7 @@ export default function Home() {
               </section>
             </section>
           </section>
-          <section  className='flex items-center justify-center py-3 bg-blue-dark text-white text-sm font-semibold'>
+          <section className='flex items-center justify-center py-3 bg-blue-dark text-white text-sm font-semibold'>
             <p>© 2021 Will & Skill</p>
           </section>
         </footer>
