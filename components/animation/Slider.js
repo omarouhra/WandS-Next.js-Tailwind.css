@@ -14,7 +14,10 @@ import s12 from "../../images/skills/s12.png";
 
 function Slider() {
   return (
-    <section className='py-12 mx-auto md:max-w-2xl lg:max-w-4xl w-screen overflow-hidden rounded-full '>
+    <section
+      data-aos='fade-in'
+      data-aos-duration='1000'
+      className='py-12 mx-auto md:max-w-2xl lg:max-w-4xl w-screen overflow-hidden rounded-full '>
       <div className='flex  space-x-6  items-center w-[600vw] md:w-[200vw]  mx-auto overflow-x-hidden animate-scrollReverse'>
         <div className='relative h-full '>
           <Image src={s1} objectFit='cover' />

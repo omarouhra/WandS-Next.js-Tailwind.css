@@ -1,7 +1,7 @@
 import Image from "next/image";
 function Blog({ src, date, title }) {
   return (
-    <div className='cursor-pointer'>
+    <div data-aos='fade-in' data-aos-duration='500' className='cursor-pointer'>
       <div className='relative w-full h-52  mb-3 lg:w-[300px] lg:h-44'>
         <Image src={src} layout='fill' objectFit='cover' />
       </div>

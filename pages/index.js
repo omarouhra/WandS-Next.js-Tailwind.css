@@ -1,12 +1,5 @@
 import Head from "next/head";
-import {
-  AdjustmentsIcon,
-  BeakerIcon,
-  DesktopComputerIcon,
-  MenuAlt4Icon,
-  NewspaperIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuAlt4Icon, XIcon } from "@heroicons/react/outline";
 import Links from "../components/animation/Links";
 import { useState, useEffect } from "react";
 import Hero from "../components/layout/Hero";
@@ -31,10 +24,7 @@ export default function Home() {
   const [projectId, setProjectId] = useState(0);
 
   const openMenu = () => {
-    const menu = document.querySelector("#menu");
     setIsMenuOpen(!isMenuOpen);
-
-    menu.classList.add("animate-fade-in");
   };
   return (
     <>
@@ -59,7 +49,12 @@ export default function Home() {
         </Head>
         {/* Navigation */}
         <section className='relative flex items-center justify-start px-4 py-8 md:py-12 md:px-6 lg:py-16  max-w-[90vw] lg:mx-auto'>
-          <a href='#' className='font-logoFont text-md'>
+          <a
+            href='#'
+            className='font-logoFont text-md '
+            data-aos='fade-down'
+            data-aos-duration='900'
+            data-aos-delay='200'>
             Will <br /> & Skill
           </a>
           <div className=' fixed right-4 lg:right-[6vw]  z-50 h-12 overflow-hidden cursor-pointer md:hover:text-white md:hover:bg-black rounded-full p-1 transition duration-50'>
@@ -128,7 +123,7 @@ export default function Home() {
         <Hero />
 
         {/* Companies */}
-        <section>
+        <section data-aos='fade-in' data-aos-duration='500'>
           <section>
             <hr className='text-gray-400 ' />
             <p className='text-xs -mt-4 font-semibold text-blue-dark text-center bg-gray-100 py-2 w-36 lg:w-44 rounded-full mx-auto'>
@@ -145,7 +140,8 @@ export default function Home() {
             firstPart='We guide and assist our clients in designing and developing '
             span='seamless'
             secondPart='digital experiences'
-            center={true}
+            center={ true }
+            blueSpane={true}
           />
         </section>
 
@@ -153,7 +149,13 @@ export default function Home() {
         <Picture
           image={
             <div className='relative w-[90vw] h-[20vh] md:h-[30vh] lg:h-[40vh] lg:max-w-4xl'>
-              <Image src={image1} layout='fill' objectFit='cover' />{" "}
+              <Image
+                data-aos='fade-in'
+                data-aos-duration='1000'
+                src={image1}
+                layout='fill'
+                objectFit='cover'
+              />{" "}
             </div>
           }
         />
@@ -162,7 +164,7 @@ export default function Home() {
         <section
           id='aboutUs'
           className='padding md:max-w-6xl mx-auto space-y-16 px-6'>
-          <article>
+          <article data-aos='fade-right' data-aos-duration='500'>
             <p className='text-lg max-w-xl'>
               We help you succeed with your digital efforts by developing
               <span className='span'> solutions</span> tailored for your
@@ -172,9 +174,12 @@ export default function Home() {
               Contact us
             </button>
           </article>
-          <article className=' flex flex-col justify-center items-end'>
+          <article
+            data-aos='fade-left'
+            data-aos-duration='500'
+            className=' flex flex-col justify-center items-end'>
             <Title title={"About us"} alignementRight={true} />
-            <p className=' text-gray text-right  my-6 max-w-xl leading-loose'>
+            <p className=' text-gray text-sm lg:text-md text-right  my-6 max-w-xl leading-loose md:leading-loose lg:leading-loose'>
               Our teams thrive on challenges and we enjoy crafting world class
               solutions that enable start-ups and established companies to
               streamline internal processes and build great products.
@@ -209,6 +214,8 @@ export default function Home() {
           image={
             <div className='relative w-[80vw] h-[25vh] md:h-[40vh]  lg:h-[50vh] lg:max-w-4xl'>
               <Image
+                data-aos='fade-in'
+                data-aos-duration='1000'
                 src='https://images.unsplash.com/photo-1560264418-c4445382edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
                 layout='fill'
                 objectFit='cover'
@@ -264,7 +271,11 @@ export default function Home() {
         </section>
 
         {/* Contact us */}
-        <section id='contacts' className='padding md:max-w-6xl mx-auto px-6 '>
+        <section
+          data-aos='fade-in'
+          data-aos-duration='500'
+          id='contacts'
+          className='padding md:max-w-6xl mx-auto px-6 '>
           <section className='py-12 px-6 md:px-12 bg-blue-dark text-white shadow-2xl md:flex md:space-x-12'>
             <p className=' text-3xl leading-loose mb-10 md:w-2/3'>
               NOW ABOUT YOUR <br />
@@ -285,11 +296,14 @@ export default function Home() {
 
         {/* Carrer section */}
         <section className='pb-12 md:max-w-6xl mx-auto px-6  flex flex-col space-y-12 md:flex-row md:space-y-0 md:justify-between'>
-          <p>
+          <p data-aos='fade-right' data-aos-duration='500'>
             Looking for a <span className='span'>job?</span>
           </p>
 
-          <section className='md:w-1/2'>
+          <section
+            data-aos='fade-left'
+            data-aos-duration='500'
+            className='md:w-1/2'>
             <p className='text-gray-dark text-xs md:text-md leading-loose mb-8 '>
               We are constantly looking for more colleagues who want to help us
               help our customers build the IT systems of the future.
@@ -352,7 +366,7 @@ export default function Home() {
               </section>
             </section>
           </section>
-          <section className='flex items-center justify-center py-3 bg-blue-dark text-white text-sm font-semibold'>
+          <section  className='flex items-center justify-center py-3 bg-blue-dark text-white text-sm font-semibold'>
             <p>© 2021 Will & Skill</p>
           </section>
         </footer>

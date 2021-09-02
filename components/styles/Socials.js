@@ -1,7 +1,10 @@
 import Image from "next/image";
 function Socials() {
   return (
-    <section className='flex space-x-5 items-center'>
+    <section
+      data-aos='fade-left'
+      data-aos-duration='900'
+      className='flex space-x-5 items-center'>
       <a target='_blank' href='https://www.instagram.com/willandskill/'>
         <Image
           width='18px'

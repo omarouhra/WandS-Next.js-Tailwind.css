@@ -9,7 +9,12 @@ module.exports = {
         logoFont: "Open Sans Condensed",
       },
       fontWeight: {
-        light: "100",
+        "extra-light": 100,
+        thin: 200,
+        light: 300,
+        normal: 400,
+        semibold: 600,
+        bold: 700,
       },
       colors: {
         blue: {
