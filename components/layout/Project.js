@@ -15,32 +15,13 @@ function Project({
   id,
 }) {
   const nextProject = () => {
-    const image = document.querySelector("#image");
-    const content = document.querySelector("#projectContent");
-
     if (id < 2) {
-      image.classList.add("animate-fade-out");
-      content.classList.add("animate-fade-out");
-      setTimeout(() => {
-        setProjectId(id + 1);
-        image.classList.remove("animate-fade-out");
-        content.classList.remove("animate-fade-out");
-      }, 800);
+      setProjectId(id + 1);
     }
   };
   const previousProject = () => {
-    const image = document.querySelector("#image");
-    const content = document.querySelector("#projectContent");
-
     if (id) {
-      image.classList.add("animate-fade-out");
-      content.classList.add("animate-fade-out");
-
-      setTimeout(() => {
-        setProjectId(id - 1);
-        image.classList.remove("animate-fade-out");
-        content.classList.remove("animate-fade-out");
-      }, 800);
+      setProjectId(id - 1);
     }
   };
   return (

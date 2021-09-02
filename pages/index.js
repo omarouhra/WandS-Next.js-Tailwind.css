@@ -24,6 +24,8 @@ export default function Home() {
   const [projectId, setProjectId] = useState(0);
 
   const openMenu = () => {
+    const menu = document.querySelector("#menu");
+
     setIsMenuOpen(!isMenuOpen);
   };
   return (
@@ -56,7 +58,7 @@ export default function Home() {
             data-aos-delay='200'>
             Will <br /> & Skill
           </a>
-          <div className=' fixed right-4 lg:right-[6vw]  z-50 h-12 overflow-hidden cursor-pointer md:hover:text-white md:hover:bg-black rounded-full p-1 transition duration-50'>
+          <div className=' fixed right-4 lg:right-[6vw]  z-50 h-12 overflow-hidden cursor-pointer  rounded-full p-1 transition duration-150'>
             <MenuAlt4Icon
               className=''
               className={isMenuOpen ? "menuButton" : "menuButton-active"}

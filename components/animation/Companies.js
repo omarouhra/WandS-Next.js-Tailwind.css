@@ -20,7 +20,7 @@ import c18 from "../../images/companies/c18.png";
 function Companies() {
   return (
     <section className='py-12 mx-auto md:max-w-2xl lg:max-w-4xl w-screen overflow-hidden rounded-full '>
-      <div className='flex  space-x-6  items-center w-[600vw] md:w-[200vw]  mx-auto overflow-x-hidden animate-scroll'>
+      <div className='flex  space-x-6  items-center w-[600vw] lg:w-[200vw]  mx-auto overflow-x-hidden animate-scroll'>
         <div className='relative h-full '>
           <Image src={c1} objectFit='cover' />
         </div>
