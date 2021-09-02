@@ -124,7 +124,10 @@ export default function Home() {
         <Hero />
 
         {/* Companies */}
-        <section data-aos='fade-in' data-aos-duration='500'>
+        <section
+          data-aos='fade-in'
+          data-aos-duration='500'
+          data-aos-delay='300'>
           <section>
             <hr className='text-gray-400 ' />
             <p className='text-xs -mt-4 font-semibold text-blue-dark text-center bg-gray-100 py-2 w-36 lg:w-44 rounded-full mx-auto'>

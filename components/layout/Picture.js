@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Picture({ alignementRight, image }) {
   return (
-    <section  className='padding'>
+    <section>
       <div className='py-14 lg:py-36 relative flex justify-center items-center'>
         <div
           className={
