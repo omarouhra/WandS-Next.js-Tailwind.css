@@ -13,14 +13,14 @@ import c12 from "../../images/companies/c12.png";
 import c13 from "../../images/companies/c13.png";
 import c14 from "../../images/companies/c14.png";
 import c15 from "../../images/companies/c15.png";
-import c16 from "../../images/companies/c16.png";
+import c16 from "../../images/companies/c16.png"; 
 import c17 from "../../images/companies/c17.png";
 import c18 from "../../images/companies/c18.png";
 
 function Companies() {
   return (
     <section className='py-12 mx-auto max-w-4xl w-screen overflow-hidden rounded-full '>
-      <div className='flex gap-6  items-center w-[600vw] md:w-[200vw]  mx-auto overflow-x-hidden animate-scroll'>
+      <div className='flex  space-x-6  items-center w-[600vw] md:w-[200vw]  mx-auto overflow-x-hidden animate-scroll'>
         <div className='relative h-full '>
           <Image src={c1} objectFit='cover' />
         </div>
